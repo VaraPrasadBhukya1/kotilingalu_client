@@ -1,0 +1,489 @@
+.App {
+  text-align: center;
+}
+body {
+  /* Full-page background image */
+background-color: #dc3545;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title{
+  color: maroon;
+  font-weight: bold;
+  font-size:18px;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navbar Styling */
+.navBar {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: #f8d49e; /* Dark blue background for professionalism */
+  padding: 15px 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navBar li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.navBar a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: maroon;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.navBar a:hover {
+  background-color: #f39c12; /* Golden color when hovered */
+  color: #fff;
+  transform: scale(1.1); /* Slight zoom effect for a more interactive feel */
+}
+
+.navBar a.active {
+  background-color: maroon; /* Active state (clicked link) */
+  color: #fff;
+}
+
+.navBar a:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .navBar li {
+    margin: 10px 0;
+  }
+
+  .navBar a {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%; /* Make links full width on mobile */
+    text-align: center;
+  }
+}
+
+
+.paragraph {
+  font-size: 15px;
+}
+
+.sides {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 40px 30px;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  width: 100%;
+  max-width: 350px;
+  height: 375px; /* Set the fixed height */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .gallery-item {
+    max-width: 100%;
+    height: 100%; /* Adjust height for smaller screens */
+  }
+}
+/* About Section */
+.about-container {
+  padding: 50px 30px;
+  background-color: #fff;
+  /* border-radius: 15px; */
+  max-width: 1100px;
+  margin: 0px auto;
+  color: #333;
+  background-color: #f8d49e;
+  background-position: center;
+  width: 100%;
+  min-height: 400px; /* Ensure the container has sufficient height */
+  position: relative; /* Needed for pseudo-element */
+}
+
+/* Pseudo-element to apply opacity to background image */
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* 50% opacity for the background image */
+  z-index: -1; /* Position it behind the content */
+}
+
+
+.about-heading {
+  font-size: 28px;
+  color: #b97d2b; /* Gold color */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.about-heading:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #b97d2b;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-paragraph {
+  font-size: 18px;
+  color: #4d4d4d;
+  line-height: 1.5;
+}
+
+.about-paragraph a {
+  color: #b97d2b;
+  text-decoration: none;
+}
+
+.about-paragraph a:hover {
+  text-decoration: underline;
+}
+
+/* Map Section */
+.map-description {
+  font-size: 18px;
+  color: #4d4d4d;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.map-link {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.map-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  height: 45px;
+  width: 45px;
+}
+
+.map-image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-heading {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  .gallery-item {
+    max-width: 100%;
+  }
+
+  .map-image {
+    width: 45px;
+    max-width: 45px;
+  }
+}
+
+/* Background Texture for Elegance (Optional) */
+.about-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+}
+
+/* Add subtle border to the image */
+.map-image {
+  border: 5px solid #f1c27d; /* Gold border */
+}
+
+.footer{
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+.wtsapp-icon{
+  height: 24px;
+}
+
+.read-more-btn{
+  color: rgb(7, 7, 255);
+}
+
+/* General styling for the Rituals page */
+.rituals-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Card container */
+.pooja-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+/* Individual Pooja Card */
+.pooja-card {
+  width: 300px;
+  border: 10px solid #f1c27d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+  scroll-snap-align: center; /* Ensures each card aligns in the center when scrolling */
+}
+
+.pooja-card:hover {
+  transform: translateY(-5px);
+}
+
+.pooja-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pooja-title {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  /* Flex container for horizontal scroll */
+  .pooja-cards {
+    display: flex;
+    flex-direction: row; /* Ensure cards are aligned in a row */
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory; /* Enables snapping for swipe effect */
+    padding: 10px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    flex-wrap: nowrap; /* Prevents cards from wrapping to the next line */
+  }
+
+  /* Individual Pooja Card adjustments for mobile */
+  .pooja-card {
+    flex: 0 0 auto; /* Ensures the cards do not stretch */
+    scroll-snap-align: center; /* Ensures cards snap to center when scrolling */
+    margin-right: 15px;
+    width: 280px; /* Adjust width if needed */
+  }
+
+  /* Hide scrollbar but keep scroll functionality */
+  .pooja-cards::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for a clean look */
+  }
+
+  .pooja-cards {
+    -ms-overflow-style: none; /* For IE and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+}
+
+/* Modal Styling */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ReactModal__Content {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  margin: 10% auto;
+  text-align: center;
+}
+
+
+.know-more-btn{
+  background-color: maroon;
+  color: #fff;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pooja-description {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8d49e;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.pooja-description h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: maroon;
+  margin-bottom: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.pooja-description p {
+  font-size: 18px;
+  color: #4d4d4d;
+  line-height: 1.5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Modal Styles */
+.custom-modal {
+  padding: 20px;
+  margin: 10% auto;
+  background-color: #fff3cd;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.custom-modal h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: maroon;
+}
+
+.custom-modal p {
+  font-size: 16px;
+  color: #4d4d4d;
+  line-height: 1.5;
+}
+
+.custom-modal ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .custom-modal {
+    padding: 20px;
+    margin: 30% auto;
+    background-color: #fff3cd;
+    border-radius: 8px;
+    text-align: left;
+  }
+}
