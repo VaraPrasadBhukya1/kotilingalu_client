@@ -12,6 +12,7 @@ function App() {
     <>
       <Router>
         <div>
+
           <nav>
             <ul className='navBar'>
               <li>
@@ -19,8 +20,8 @@ function App() {
                 <h5 className='title'>Sri Kotilinga Hari Hara Mahakshetram</h5>
               </li>
               <li>
-                <NavLink 
-                  to="/" 
+                <NavLink
+                  to="/"
                   className={({ isActive }) => isActive ? 'active' : undefined}
                 >
                   Home
@@ -43,20 +44,20 @@ function App() {
                 </NavLink>
               </li> */}
               <li>
-                <NavLink 
-                  to="/rituals" 
+                <NavLink
+                  to="/rituals"
                   className={({ isActive }) => isActive ? 'active' : undefined}
                 >
                   Rituals
                 </NavLink>
               </li>
               <li>
-              <img 
-    className='wtsapp-icon' 
-    src='whatsapp.png' 
-    alt='whatsapp'
-    onClick={() => window.open('https://wa.me/7799010022?text=', '_blank')} // Open WhatsApp in a new tab
-  />
+                <img
+                  className='wtsapp-icon'
+                  src='whatsapp.png'
+                  alt='whatsapp'
+                  onClick={() => window.open('https://wa.me/7799010022?text=', '_blank')} // Open WhatsApp in a new tab
+                />
               </li>
             </ul>
           </nav>

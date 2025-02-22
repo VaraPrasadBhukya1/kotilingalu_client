@@ -1,10 +1,13 @@
 .App {
   text-align: center;
 }
+
 body {
   /* Full-page background image */
-background-color: #dc3545;
+  background-color: #dc3545;
+  padding-top: 100px;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,15 +38,16 @@ background-color: #dc3545;
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.title{
+.title {
   color: maroon;
   font-weight: bold;
-  font-size:18px;
+  font-size: 18px;
   margin: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -52,13 +56,18 @@ background-color: #dc3545;
 .navBar {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  background-color: #f8d49e; /* Dark blue background for professionalism */
+  align-items: center;
+  background-color: #f8d49e;
+  /* Light yellow-orange background */
   padding: 15px 0;
   margin: 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Adds a slight shadow */
 }
 
 .navBar li {
@@ -78,13 +87,16 @@ background-color: #dc3545;
 }
 
 .navBar a:hover {
-  background-color: #f39c12; /* Golden color when hovered */
+  background-color: #f39c12;
+  /* Golden color when hovered */
   color: #fff;
-  transform: scale(1.1); /* Slight zoom effect for a more interactive feel */
+  transform: scale(1.1);
+  /* Slight zoom effect for a more interactive feel */
 }
 
 .navBar a.active {
-  background-color: maroon; /* Active state (clicked link) */
+  background-color: maroon;
+  /* Active state (clicked link) */
   color: #fff;
 }
 
@@ -99,13 +111,15 @@ background-color: #dc3545;
   }
 
   .navBar li {
+    list-style: none;
     margin: 10px 0;
   }
 
   .navBar a {
     font-size: 16px;
     padding: 10px;
-    width: 100%; /* Make links full width on mobile */
+    width: 100%;
+    /* Make links full width on mobile */
     text-align: center;
   }
 }
@@ -122,7 +136,7 @@ background-color: #dc3545;
 
 /* Gallery Section */
 .gallery-section {
-  padding: 40px 30px;
+  padding: 25px 30px;
 }
 
 .gallery-container {
@@ -135,7 +149,8 @@ background-color: #dc3545;
 .gallery-item {
   width: 100%;
   max-width: 350px;
-  height: 375px; /* Set the fixed height */
+  height: 375px;
+  /* Set the fixed height */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -147,21 +162,25 @@ background-color: #dc3545;
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire container */
+  object-fit: cover;
+  /* Ensures the image covers the entire container */
   transition: transform 0.3s ease;
 }
 
 .gallery-item img:hover {
-  transform: scale(1.05); /* Zoom effect */
+  transform: scale(1.05);
+  /* Zoom effect */
 }
 
 /* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .gallery-item {
     max-width: 100%;
-    height: 100%; /* Adjust height for smaller screens */
+    height: 100%;
+    /* Adjust height for smaller screens */
   }
 }
+
 /* About Section */
 .about-container {
   padding: 50px 30px;
@@ -173,8 +192,10 @@ background-color: #dc3545;
   background-color: #f8d49e;
   background-position: center;
   width: 100%;
-  min-height: 400px; /* Ensure the container has sufficient height */
-  position: relative; /* Needed for pseudo-element */
+  min-height: 400px;
+  /* Ensure the container has sufficient height */
+  position: relative;
+  /* Needed for pseudo-element */
 }
 
 /* Pseudo-element to apply opacity to background image */
@@ -189,14 +210,17 @@ background-color: #dc3545;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.5; /* 50% opacity for the background image */
-  z-index: -1; /* Position it behind the content */
+  opacity: 0.5;
+  /* 50% opacity for the background image */
+  z-index: -1;
+  /* Position it behind the content */
 }
 
 
 .about-heading {
   font-size: 28px;
-  color: #b97d2b; /* Gold color */
+  color: #b97d2b;
+  /* Gold color */
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -255,7 +279,8 @@ background-color: #dc3545;
 }
 
 .map-image:hover {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
+  /* Slight zoom effect */
 }
 
 /* Responsive Design */
@@ -297,19 +322,20 @@ background-color: #dc3545;
 
 /* Add subtle border to the image */
 .map-image {
-  border: 5px solid #f1c27d; /* Gold border */
+  border: 5px solid #f1c27d;
+  /* Gold border */
 }
 
-.footer{
+.footer {
   margin-bottom: 50px;
   margin-left: 50px;
 }
 
-.wtsapp-icon{
+.wtsapp-icon {
   height: 24px;
 }
 
-.read-more-btn{
+.read-more-btn {
   color: rgb(7, 7, 255);
 }
 
@@ -337,7 +363,8 @@ background-color: #dc3545;
   cursor: pointer;
   text-align: center;
   transition: transform 0.3s ease;
-  scroll-snap-align: center; /* Ensures each card aligns in the center when scrolling */
+  scroll-snap-align: center;
+  /* Ensures each card aligns in the center when scrolling */
 }
 
 .pooja-card:hover {
@@ -358,34 +385,46 @@ background-color: #dc3545;
 
 /* Mobile View */
 @media (max-width: 768px) {
+
   /* Flex container for horizontal scroll */
   .pooja-cards {
     display: flex;
-    flex-direction: row; /* Ensure cards are aligned in a row */
+    flex-direction: row;
+    /* Ensure cards are aligned in a row */
     gap: 20px;
-    overflow-x: auto; /* Enable horizontal scroll */
-    scroll-snap-type: x mandatory; /* Enables snapping for swipe effect */
+    overflow-x: auto;
+    /* Enable horizontal scroll */
+    scroll-snap-type: x mandatory;
+    /* Enables snapping for swipe effect */
     padding: 10px;
-    scroll-behavior: smooth; /* Smooth scrolling */
-    flex-wrap: nowrap; /* Prevents cards from wrapping to the next line */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+    flex-wrap: nowrap;
+    /* Prevents cards from wrapping to the next line */
   }
 
   /* Individual Pooja Card adjustments for mobile */
   .pooja-card {
-    flex: 0 0 auto; /* Ensures the cards do not stretch */
-    scroll-snap-align: center; /* Ensures cards snap to center when scrolling */
+    flex: 0 0 auto;
+    /* Ensures the cards do not stretch */
+    scroll-snap-align: center;
+    /* Ensures cards snap to center when scrolling */
     margin-right: 15px;
-    width: 280px; /* Adjust width if needed */
+    width: 280px;
+    /* Adjust width if needed */
   }
 
   /* Hide scrollbar but keep scroll functionality */
   .pooja-cards::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar for a clean look */
+    display: none;
+    /* Hide the scrollbar for a clean look */
   }
 
   .pooja-cards {
-    -ms-overflow-style: none; /* For IE and Edge */
-    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+    /* For IE and Edge */
+    scrollbar-width: none;
+    /* For Firefox */
   }
 }
 
@@ -405,7 +444,7 @@ background-color: #dc3545;
 }
 
 
-.know-more-btn{
+.know-more-btn {
   background-color: maroon;
   color: #fff;
   padding: 8px 16px;
@@ -440,6 +479,7 @@ background-color: #dc3545;
   max-width: 800px;
   margin: 0 auto;
 }
+
 /* Modal Styles */
 .custom-modal {
   padding: 20px;
@@ -485,5 +525,53 @@ button {
     background-color: #fff3cd;
     border-radius: 8px;
     text-align: left;
+  }
+
+  .animated-text {
+    position: static;
+    right: -100%;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: moveText 10s linear infinite;
+    color: #f8ac3a;
+  }
+}
+
+.containerr {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+}
+
+/* Ensure animation happens inside the container */
+.animated-text {
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: moveText 10s linear infinite;
+  color: #ffcf86;
+}
+
+/* Navbar stays fixed */
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Keyframes for smooth left-to-right animation */
+@keyframes moveText {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
   }
 }
