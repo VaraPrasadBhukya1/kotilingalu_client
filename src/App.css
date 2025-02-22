@@ -552,7 +552,7 @@ button {
   white-space: nowrap;
   font-size: 1.5rem;
   font-weight: bold;
-  animation: moveText 10s linear infinite;
+  animation: moveText 20s linear infinite;
   color: #ffcf86;
 }
 
